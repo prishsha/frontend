@@ -1,0 +1,49 @@
+
+.add-name-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: #F6EEC9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional for better visual effect */
+}
+
+h2 {
+  font-family: cursive;
+  font-size: 28px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3%;
+  font-size: large;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit, #name, #email {
+  padding: 2%;
+  margin: 5%;
+}
+
+label, button {
+  font-family: 'Irish Grover';
+}
+
+input {
+  width: 150%;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #EE614E;
+  color: white;
+}
+
+.back {
+  margin-top: 30px
+}
+

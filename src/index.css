@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #A1DD70, #DCEAC6, #A1DD70);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  padding-top: 10px;
+}
+
+.title {
+  padding-left: 20px;
+  font-size: 50px;
+  color: #EE614E;
+  font-family: 'Irish Grover', cursive;
+}
+
+.gingerbread {
+  height: fit-content;
+  width: auto;
+}
+
+.main {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.main button {
+  position: absolute;
+  font-size: 24px;
+  font-family: cursive;
+  background-color: #F6EEC9;
+  padding: 2% 5%;
+  border-radius: 20%;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.main button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.add-name {
+  top: 15%;
+  left: 10%;
+}
+
+.shuffle {
+  top: 15%;
+  right: 10%;
+}
+
+.timer-section {
+  margin-top: 50px;
+  text-align: center;
+  padding: 20px;
+}
+
+.timer {
+  font-size: 2rem;
+  font-weight: bold;
+  width: 150px;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: transform 0.5s ease-in-out;
+}
+
+.timer.flipping {
+  animation: flip 2s ease-in-out 2;
+}
+
+@keyframes flip {
+  0%, 100% {
+    transform: rotateX(0);
+  }
+  50% {
+    transform: rotateX(180deg);
+  }
+}
+
+.scratch-board-container {
+  position: relative;
+  margin-top: 20%;
+  width: 300px;
+  height: 150px;
+}
+
+.scratch-board {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* Ensure the scratch layer is on top */
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.hidden-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  background-color: #F6EEC9;
+  z-index: 1; /* Ensure it's below the canvas */
+  border-radius: 8px;
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Center the button */
+}
+
+.view-participants {
+  font-size: 20px;
+  font-family: cursive;
+  background-color: #F6EEC9;
+  border-radius: 12px;
+  border: none;
+}
+
+.heading {
+  padding-top: 50%;
+}
+
+.participant {
+  display: flex; 
+  justify-content: space-between; /* Place elements at opposite ends */
+  align-items: center; /* Vertically align items */
+  background-color: #fff; /* Background for better visibility */
+  border-radius: 5px; /* Rounded corners */
+  padding: 15px; /* Add some spacing */
+  margin: 10px 0; /* Space between rows */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
+}
+
+.participant-name{
+  font-size: 1.2rem; /* Adjust font size */
+  color: #000; /* Make text visible */
+  flex-grow: 1; /* Allow the name to take up available space */
+  text-align: left;
+  margin-right: 10px; /* Align text to the left */
+}
+
+.delete-button {
+  background: none !important; 
+  margin: 100px;/* Remove button background */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor */
+  color: #EE614E;
+}
+
+
